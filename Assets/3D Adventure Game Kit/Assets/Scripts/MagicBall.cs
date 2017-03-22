@@ -17,7 +17,7 @@ public class MagicBall : MonoBehaviour
 			if (CheckForMagicBall == null)
 			{
 				MagicBall_object = (GameObject)Instantiate(MagicBall_prefab, transform.position + transform.forward+transform.up, transform.rotation);
-				MagicBall_object.GetComponent<Rigidbody>().AddForce(transform.forward, ForceMode.Impulse);
+				MagicBall_object.GetComponent<Rigidbody>().AddForce(transform.forward*4, ForceMode.Impulse);
 			}
 		}
 	}

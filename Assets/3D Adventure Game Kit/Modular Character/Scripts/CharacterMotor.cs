@@ -26,6 +26,7 @@ public class GeneralSettings
 [System.Serializable]
 public class MovementSettings
 {
+	public float sprintSpeed = 1.5f;
     public float movementSpeed = 8f;                                    //The speed the character moves around.
     public Vector3 movementDirection = Vector3.zero;                    //This variable is used to input the direction the character will move.
     [Range(0, 1)] public float groundedVelocityInfluence = 1f;          //Velocity influence changes the strength of the force and how quickly it will affect the current movement.
@@ -345,6 +346,7 @@ public class CharacterMotor : AbstractBehaviour
     /// </summary>
     void Movement()
     {
+		Vector3 newVelocity;
         //Checks if the velocityMovement variable is active and if there is no movement input the character will retain its velocity.
         if (movement.velocityMovement && movement.movementDirection == Vector3.zero)
         {
@@ -355,9 +357,11 @@ public class CharacterMotor : AbstractBehaviour
         //Store the characters current velocity.
         Vector3 velocity = m_Rigidbody.velocity;
 
-
+		if (Input.GetButton("Fire3"))
+			newVelocity = ((movement.movementDirection * movement.movementSpeed*movement.sprintSpeed) - velocity);
         //Calculates a new desired velocity using movementDirection multiplied by movementSpeed removing the previous velocity.
-        Vector3 newVelocity = ((movement.movementDirection * movement.movementSpeed) - velocity);
+		else
+       		newVelocity = ((movement.movementDirection * movement.movementSpeed) - velocity);
 
 
         //Here we clamp the values maximum velocity change by depending on the velocityInfluence based on the grounded state.
