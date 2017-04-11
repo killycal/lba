@@ -1,4 +1,5 @@
 sceneSetups:
-- path: Assets/3D Adventure Game Kit/Modular Character/Test World/TestWorld.unity
+- path: C:/Users/Killycal/Documents/GitHub/lba/Assets/3D Adventure Game Kit/Modular
+    Character/Test World/TestWorld.unity
   isLoaded: 1
   isActive: 1
