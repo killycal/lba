@@ -94,6 +94,12 @@
      <Compile Include="Assets\LBA Assets\Effects\MotionBlur\Helpers\ReconstructionFilter.cs" />
      <Compile Include="Assets\LBA Assets\Effects\MotionBlur\Helpers\Settings.cs" />
      <Compile Include="Assets\LBA Assets\Effects\MotionBlur\MotionBlur.cs" />
+     <Compile Include="Assets\LBA Assets\Effects\Playdead\EffectBase.cs" />
+     <Compile Include="Assets\LBA Assets\Effects\Playdead\Extensions.cs" />
+     <Compile Include="Assets\LBA Assets\Effects\Playdead\FrustumJitter.cs" />
+     <Compile Include="Assets\LBA Assets\Effects\Playdead\TemporalReprojection.cs" />
+     <Compile Include="Assets\LBA Assets\Effects\Playdead\VelocityBuffer.cs" />
+     <Compile Include="Assets\LBA Assets\Effects\Playdead\VelocityBufferTag.cs" />
      <Compile Include="Assets\LBA Assets\Effects\ScreenSpaceReflection\ScreenSpaceReflection.cs" />
      <Compile Include="Assets\LBA Assets\Effects\TemporalAntiAliasing\TemporalAntiAliasing.cs" />
      <Compile Include="Assets\LBA Assets\Effects\TonemappingColorGrading\TonemappingColorGrading.cs" />
@@ -106,12 +112,6 @@
      <Compile Include="Assets\LBA Assets\Environment\Water\Water\Scripts\Water.cs" />
      <Compile Include="Assets\LBA Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\LBA Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
-     <Compile Include="Assets\Scripts\EffectBase.cs" />
-     <Compile Include="Assets\Scripts\Extensions.cs" />
-     <Compile Include="Assets\Scripts\FrustumJitter.cs" />
-     <Compile Include="Assets\Scripts\TemporalReprojection.cs" />
-     <Compile Include="Assets\Scripts\VelocityBuffer.cs" />
-     <Compile Include="Assets\Scripts\VelocityBufferTag.cs" />
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\3D Adventure Game Kit\Assets\Shader\Diffuse Transparency.shader" />
@@ -166,9 +166,6 @@
      <None Include="Assets\LBA Assets\Effects\MotionBlur\Resources\Reconstruction.shader" />
      <None Include="Assets\LBA Assets\Effects\LensAberrations\Resources\LensAberrations.shader" />
      <None Include="Assets\LBA Assets\Effects\TonemappingColorGrading\Resources\HistogramCompute.compute" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -183,9 +180,6 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Purchasing">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
