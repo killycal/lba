@@ -1,9 +1,9 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{F83AC208-3B48-865B-5154-95C2494CCC98}") = "lba", "Assembly-CSharp.csproj", "{43DE5EC9-BAD6-F085-3E4F-579596B8A15E}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lba", "Assembly-CSharp.csproj", "{43DE5EC9-BAD6-F085-3E4F-579596B8A15E}"
 EndProject
-Project("{F83AC208-3B48-865B-5154-95C2494CCC98}") = "lba", "Assembly-CSharp-Editor.csproj", "{086FB5E6-0361-FB29-4011-09F464504B3B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lba", "Assembly-CSharp-Editor.csproj", "{086FB5E6-0361-FB29-4011-09F464504B3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

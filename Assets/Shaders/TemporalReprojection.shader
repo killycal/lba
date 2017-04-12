@@ -1,4 +1,6 @@
-﻿// Copyright (c) <2015> <Playdead>
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+// Copyright (c) <2015> <Playdead>
 // This file is subject to the MIT License as seen in the root of this folder structure (LICENSE.TXT)
 // AUTHOR: Lasse Jon Fuglsang Pedersen <lasse@playdead.com>
 
@@ -58,7 +60,7 @@ Shader "Playdead/Post/TemporalReprojection"
 		v2f OUT;
 
 	#if UNITY_VERSION < 540
-		OUT.cs_pos = mul(UNITY_MATRIX_MVP, IN.vertex);
+		OUT.cs_pos = UnityObjectToClipPos(IN.vertex);
 	#else
 		OUT.cs_pos = UnityObjectToClipPos(IN.vertex);
 	#endif
