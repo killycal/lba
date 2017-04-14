@@ -11,10 +11,10 @@ public class AdvancedMovement : Movement {
         base.Update();
 
         //This will rotate the camera slightly when moving left or right when the user is using a Gamepad or using Mobile control schemes
-        if(m_Input.current.type == InputManager.ControlType.Gamepad || m_Input.current.type == InputManager.ControlType.Mobile)
+        /*if(m_Input.current.type == InputManager.ControlType.Gamepad || m_Input.current.type == InputManager.ControlType.Mobile)
             if (m_Motor.collision.grounded)
                 if (m_Camera.position.distanceFromTarget < -1)
-                    m_Camera.orbit.hRotation += m_Input.current.moveH * 150f * 0.5f * Time.deltaTime;
+                    m_Camera.orbit.hRotation += m_Input.current.moveH * 150f * 0.5f * Time.deltaTime;*/
 
 
 

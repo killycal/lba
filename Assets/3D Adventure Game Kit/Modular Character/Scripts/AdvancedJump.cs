@@ -23,7 +23,7 @@ public class AdvancedJump : MultiJump {
         if (m_Motor.collision.grounded)
         {
             //When the character is grounded. If the character is sliding we perform a slide jump, if not we perform a normal jump.
-            if (m_Motor.movement.sliding)
+            /*if (m_Motor.movement.sliding)
             {
                 //Slide jumps and basic jumps count as part of the multijump.
                 jumpsRemaining = jumpCount - 1;
@@ -31,11 +31,11 @@ public class AdvancedJump : MultiJump {
                 jumped = true;
             }
             else
-            {
+            {*/
                 jumpsRemaining = jumpCount - 1;
                 BaseJump();
                 jumped = true;
-            }
+            //}
         }
         else
         {

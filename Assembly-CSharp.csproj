@@ -112,6 +112,7 @@
      <Compile Include="Assets\LBA Assets\Environment\Water\Water\Scripts\Water.cs" />
      <Compile Include="Assets\LBA Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\LBA Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
+     <Compile Include="Assets\LBA Assets\Mushroom.cs" />
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
      <None Include="Assets\3D Adventure Game Kit\Assets\Shader\Diffuse Transparency.shader" />

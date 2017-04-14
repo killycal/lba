@@ -31,6 +31,15 @@ public class Collectable : MonoBehaviour
 
         }
     }
+	void OnCollisionEnter(Collision c)
+	{
+
+		if (c.gameObject.tag == "Player")
+		{
+			Effect(c.gameObject);
+
+		}
+	}
     /// <summary>
     /// Open virtual void used for overriding an effect on pickup.
     /// </summary>

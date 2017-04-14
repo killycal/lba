@@ -113,7 +113,7 @@ public class Health : AbstractBehaviour {
         //The direction is based on whether the origin has a value, if it does that is the direction, else the direction is just backwards from the character.
         Vector3 direction = (origin.HasValue) ? transform.position - origin.Value : -transform.forward;
         //Add a bonus up factor to the knockback
-        direction += transform.up;
+        //direction += transform.up/20;
         //Apply the velocity.
         m_Motor.ChangeVelocity(direction * knockbackForce);
 

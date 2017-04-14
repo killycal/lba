@@ -360,6 +360,8 @@ public class CharacterMotor : AbstractBehaviour
 		if (Input.GetButton("Fire3"))
 			newVelocity = ((movement.movementDirection * movement.movementSpeed*movement.sprintSpeed) - velocity);
         //Calculates a new desired velocity using movementDirection multiplied by movementSpeed removing the previous velocity.
+		else if ((Input.GetButton("Fire3"))&&(movement.sprintSpeed==0))
+			newVelocity = ((movement.movementDirection * movement.movementSpeed) - velocity);
 		else
        		newVelocity = ((movement.movementDirection * movement.movementSpeed) - velocity);
 

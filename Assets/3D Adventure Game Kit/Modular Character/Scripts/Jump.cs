@@ -40,7 +40,8 @@ public class Jump : AbstractBehaviour {
     public virtual void BaseJump()
     {
 		Vector3 newVelocity = m_Motor.movement.movementDirection;
-		if (newVelocity.magnitude == 0) 
+		print (newVelocity.magnitude);
+		if (newVelocity.magnitude < 1) 
 		{
 			newVelocity = m_Motor.transform.TransformDirection(Vector3.forward)*jumpForce/20;
 			newVelocity.z = newVelocity.z*12;
@@ -48,9 +49,9 @@ public class Jump : AbstractBehaviour {
 		} 
 		else {
 			//Calculates a new Velocity 
-			newVelocity = newVelocity * jumpForce / 20;
+			newVelocity = newVelocity * jumpForce / 25;
 		}
-        newVelocity.y = jumpForce;
+        newVelocity.y = jumpForce/1.35f;
         //then Inputs it through the ChangeVelocity method in CharacterMotor which limits the amount of sources force can be applied to the character cutting down on some strange interactions.
         m_Motor.ChangeVelocity(newVelocity);
     }
