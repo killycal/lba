@@ -17,7 +17,8 @@ public class MagicBall_Lifespan : MonoBehaviour
 	private bool returnMagicBall = false;
 	public Vector3 dist;
 	private Vector3 force;
-
+	private bool enemyHit=false;
+	private bool played=false;
 
 
 
@@ -28,6 +29,7 @@ public class MagicBall_Lifespan : MonoBehaviour
 		ball = obj.AddComponent<MagicBall>(); 
 		//bad = obj1.AddComponent<EnemyAI>(); 
 		ball.myTimer=5.0f;
+		gameObject.SendMessage ("PlaySoundThrow");
 
 	}
 	
@@ -37,6 +39,10 @@ public class MagicBall_Lifespan : MonoBehaviour
 		if ((currentNumberOfBounces >= numberOfBounces)||(Input.GetButtonDown("Fire2"))||(ball.myTimer <= 0))
 		{
 			returnMagicBall = true;
+			if ((enemyHit == false) && (played == false)) {
+				gameObject.SendMessage ("PlaySoundReturnEmpty");
+				played = true;
+			}
 		}
 		else 
 		{
@@ -49,11 +55,16 @@ public class MagicBall_Lifespan : MonoBehaviour
 			Vector3 error = tgtVel - GetComponent<Rigidbody>().velocity;
 			Vector3 force = Vector3.ClampMagnitude(gain * error, maxForce);
 			GetComponent<Rigidbody>().AddForce(force);
+			if ((enemyHit == false) && (played == false)) {
+				gameObject.SendMessage ("PlaySoundReturnEmpty");
+				played = true;
+			}
 			if (Mathf.Abs(dist.x) < 1 & Mathf.Abs(dist.z) < 1) 
 			{
 				Destroy(gameObject);
 			}
 		}
+
 	}
 	
 	void FixedUpdate()
@@ -63,9 +74,7 @@ public class MagicBall_Lifespan : MonoBehaviour
 	
 	void OnCollisionEnter(Collision collision)
 	{
-		ball.GetComponent<Rigidbody>().AddForce(transform.forward*(1/2)+transform.up*2, ForceMode.Impulse);
-		currentNumberOfBounces += 1;
-		gameObject.SendMessage("PlaySound");
+		
 		//print("collision with "+collision.transform.name);
 		if (collision.gameObject.name == controller.name)
 		{
@@ -73,11 +82,18 @@ public class MagicBall_Lifespan : MonoBehaviour
 			print (dist.x+" "+dist.z+ "it hit the player");
 			Destroy(gameObject);
 		}
-		if (collision.gameObject.tag == "Enemy")
-			{
-			Destroy(collision.gameObject); 
+		if (collision.gameObject.tag == "Enemy") {
+			gameObject.SendMessage ("PlaySoundEnemyHit");
+			enemyHit = true;
+			Destroy (collision.gameObject); 
+			currentNumberOfBounces += 2;
 			//obj1.st= EnemyAI.State.Dead;
-			}
+		} 
+		else {
+			ball.GetComponent<Rigidbody>().AddForce(transform.forward*(1/2)+transform.up*2, ForceMode.Impulse);
+			currentNumberOfBounces += 1;
+			gameObject.SendMessage("PlaySound");
+		}
 
 	}
 }

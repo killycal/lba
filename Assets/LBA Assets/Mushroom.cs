@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mushroom : MonoBehaviour {
 	public AudioClip destroy;
-	public AudioSource audio;
+	new AudioSource audio;
 	public GameObject heart_prefab;
 	private GameObject heart_object;
 	public float yield;

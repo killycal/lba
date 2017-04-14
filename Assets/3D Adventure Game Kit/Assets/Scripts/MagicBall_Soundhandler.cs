@@ -21,9 +21,26 @@ public class MagicBall_Soundhandler : MonoBehaviour
 	
 	public void PlaySound()
 	{	
-		GetComponent<AudioSource>().Stop();
-		GetComponent<AudioSource>().clip = sounds[Random.Range(0, sounds.Length)];
+		//GetComponent<AudioSource>().Stop();
+		GetComponent<AudioSource>().clip = sounds[0];
 		GetComponent<AudioSource>().Play();
 	}
-
+	public void PlaySoundEnemyHit()
+	{
+		//GetComponent<AudioSource>().Stop();
+		GetComponent<AudioSource>().clip = sounds[2];
+		GetComponent<AudioSource>().Play();
+	}
+	public void PlaySoundThrow()
+	{
+		//GetComponent<AudioSource> ().Stop ();
+		GetComponent<AudioSource> ().clip = sounds [1];
+		GetComponent<AudioSource> ().Play ();
+	}
+	public void PlaySoundReturnEmpty()
+	{
+		//GetComponent<AudioSource> ().Stop ();
+		GetComponent<AudioSource> ().clip = sounds [3];
+		GetComponent<AudioSource> ().Play ();
+	}
 }
