@@ -33,9 +33,7 @@ public class MagicBall_Soundhandler : MonoBehaviour
 	}
 	public void PlaySoundThrow()
 	{
-		//GetComponent<AudioSource> ().Stop ();
-		GetComponent<AudioSource> ().clip = sounds [1];
-		GetComponent<AudioSource> ().Play ();
+		GetComponent<AudioSource> ().PlayOneShot (sounds [1]);
 	}
 	public void PlaySoundReturnEmpty()
 	{

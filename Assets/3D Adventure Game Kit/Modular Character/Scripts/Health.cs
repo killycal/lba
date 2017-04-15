@@ -13,6 +13,7 @@ public class Health : AbstractBehaviour {
     public bool knockbackOnDamage = true;           //Bool enables knockback when the character is damaged.
     public float knockbackForce = 10f;              //If knockback is enabled this is the force the character is knock backed.
     public bool changeColorOnDamage = true;         //If this is enabled the character will turn a different color throughout the invincibility timer.
+	public AudioClip drown;
 
     [HideInInspector]public bool invincibility = false;     //If this bool is enabled the character cannot take damage.
 	public GameObject controller = null;
@@ -148,6 +149,7 @@ public class Health : AbstractBehaviour {
 	public virtual void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Water") {
+			m_Audio.PlayOneShot(drown);
 			Dead ();
 		}
 

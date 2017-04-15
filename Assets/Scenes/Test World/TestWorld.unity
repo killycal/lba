@@ -14,12 +14,12 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 8
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
-  m_FogDensity: 0.01
-  m_LinearFogStart: 0
-  m_LinearFogEnd: 300
+  m_Fog: 1
+  m_FogColor: {r: 0.50570935, g: 0.4961073, b: 0.5441177, a: 1}
+  m_FogMode: 1
+  m_FogDensity: 0.1
+  m_LinearFogStart: 20
+  m_LinearFogEnd: 50
   m_AmbientSkyColor: {r: 0.1140809, g: 0.535, b: 0.4130786, a: 1.07}
   m_AmbientEquatorColor: {r: 0, g: 0, b: 0, a: 1.07}
   m_AmbientGroundColor: {r: 0.19669119, g: 0.19669119, b: 0.19669119, a: 1.07}
@@ -27,7 +27,7 @@ RenderSettings:
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: b5fe162d07afb11449b4ad3c6db9c8c8, type: 2}
-  m_HaloStrength: 0.5
+  m_HaloStrength: 0.033
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
@@ -314,6 +314,10 @@ Prefab:
       propertyPath: m_TagString
       value: Moving Platform
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 5490afc6ba857364795d4bb7483dab58, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 090d83967c47e7f41a1b8b12bbe4f64d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5490afc6ba857364795d4bb7483dab58, type: 3}
   m_IsPrefabParent: 0
@@ -449,6 +453,7 @@ MonoBehaviour:
   knockbackOnDamage: 1
   knockbackForce: 10
   changeColorOnDamage: 1
+  drown: {fileID: 8300000, guid: ad99d074e29a4014db0a51594e2e9f6f, type: 3}
   invincibility: 0
   controller: {fileID: 0}
   respawnPoint: {x: 0, y: 0, z: 0}
