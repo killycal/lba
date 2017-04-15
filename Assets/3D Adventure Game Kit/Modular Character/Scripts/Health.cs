@@ -15,6 +15,7 @@ public class Health : AbstractBehaviour {
     public bool changeColorOnDamage = true;         //If this is enabled the character will turn a different color throughout the invincibility timer.
 
     [HideInInspector]public bool invincibility = false;     //If this bool is enabled the character cannot take damage.
+	public GameObject controller = null;
 
     //Variables are set on the Start method to reset the characters position on death.
     [HideInInspector]public Vector3 respawnPoint; 
@@ -27,6 +28,7 @@ public class Health : AbstractBehaviour {
     {
         respawnPoint = transform.position;
         respawnRotation = transform.rotation;
+		controller = GameObject.FindWithTag("Player");
     }
 
     /// <summary>
@@ -143,5 +145,12 @@ public class Health : AbstractBehaviour {
     {
         invincibility = false;
     }
+	public virtual void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Water") {
+			Dead ();
+		}
+
+	}
 
 }

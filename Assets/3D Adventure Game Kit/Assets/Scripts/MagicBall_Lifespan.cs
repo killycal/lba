@@ -87,7 +87,6 @@ public class MagicBall_Lifespan : MonoBehaviour
 			enemyHit = true;
 			Destroy (collision.gameObject); 
 			currentNumberOfBounces += 2;
-			//obj1.st= EnemyAI.State.Dead;
 		} 
 		else {
 			ball.GetComponent<Rigidbody>().AddForce(transform.forward*(1/2)+transform.up*2, ForceMode.Impulse);

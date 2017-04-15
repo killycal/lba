@@ -44,6 +44,10 @@ public class EnemyHealth : Health {
         //Communicate the state to the EnemyAI.
         ai.state = EnemyAI.State.Damaged;
     }
+	public override void OnTriggerEnter(Collider other)
+	{
+
+	}
 
     /// <summary>
     /// IEnumerator which changes the color of the character and declares the character dead.
