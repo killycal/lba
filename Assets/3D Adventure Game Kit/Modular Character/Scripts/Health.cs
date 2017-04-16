@@ -14,6 +14,7 @@ public class Health : AbstractBehaviour {
     public float knockbackForce = 10f;              //If knockback is enabled this is the force the character is knock backed.
     public bool changeColorOnDamage = true;         //If this is enabled the character will turn a different color throughout the invincibility timer.
 	public AudioClip drown;
+	public AudioClip mushroom;
 
     [HideInInspector]public bool invincibility = false;     //If this bool is enabled the character cannot take damage.
 	public GameObject controller = null;
@@ -154,5 +155,11 @@ public class Health : AbstractBehaviour {
 		}
 
 	}
+	public virtual void OnCollisionEnter(Collision other)
+	{
+		if (other.collider.gameObject.tag == "Mushroom") {
+			m_Audio.PlayOneShot(mushroom);
+		}
 
+	}
 }

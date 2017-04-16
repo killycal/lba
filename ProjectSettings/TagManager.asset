@@ -9,6 +9,7 @@ TagManager:
   - MovingPlatform
   - Moving Platform
   - Water
+  - Mushroom
   layers:
   - Default
   - TransparentFX

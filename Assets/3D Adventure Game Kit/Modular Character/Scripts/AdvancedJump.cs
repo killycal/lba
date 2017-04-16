@@ -69,7 +69,7 @@ public class AdvancedJump : MultiJump {
 
             if (m_Audio)
             {
-                m_Audio.PlayOneShot(jumpSfx, 1);
+                m_Audio.PlayOneShot(jumpSfx, 2);
             }
         }
 

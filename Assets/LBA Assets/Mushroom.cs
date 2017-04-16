@@ -22,7 +22,6 @@ public class Mushroom : MonoBehaviour {
 		if (collision.gameObject.tag == "Player")
 		{
 			if (value < yield) {
-				audio.PlayOneShot (destroy, 1);
 				heart_object = (GameObject)Instantiate (heart_prefab);
 				heart_object.transform.position = gameObject.transform.position;
 			}

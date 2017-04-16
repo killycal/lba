@@ -22,14 +22,12 @@ public class MagicBall_Soundhandler : MonoBehaviour
 	public void PlaySound()
 	{	
 		//GetComponent<AudioSource>().Stop();
-		GetComponent<AudioSource>().clip = sounds[0];
-		GetComponent<AudioSource>().Play();
+		GetComponent<AudioSource> ().PlayOneShot (sounds [0]);
 	}
 	public void PlaySoundEnemyHit()
 	{
 		//GetComponent<AudioSource>().Stop();
-		GetComponent<AudioSource>().clip = sounds[2];
-		GetComponent<AudioSource>().Play();
+		GetComponent<AudioSource> ().PlayOneShot (sounds [2]);
 	}
 	public void PlaySoundThrow()
 	{
@@ -38,7 +36,6 @@ public class MagicBall_Soundhandler : MonoBehaviour
 	public void PlaySoundReturnEmpty()
 	{
 		//GetComponent<AudioSource> ().Stop ();
-		GetComponent<AudioSource> ().clip = sounds [3];
-		GetComponent<AudioSource> ().Play ();
+		GetComponent<AudioSource> ().PlayOneShot (sounds [3]);
 	}
 }
