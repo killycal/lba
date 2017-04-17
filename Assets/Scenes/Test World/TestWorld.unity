@@ -174,7 +174,6 @@ GameObject:
   - component: {fileID: 42758812}
   - component: {fileID: 42758815}
   - component: {fileID: 42758814}
-  - component: {fileID: 42758813}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -203,18 +202,6 @@ RectTransform:
   m_AnchoredPosition: {x: 85.200195, y: 52.5}
   m_SizeDelta: {x: 220, y: 22}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &42758813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114968600102939640, guid: c96e29281a4584441a42e14ac30f3d1d,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 42758811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &42758814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +222,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300008, guid: be8a9e2328f32714aa7c89eef07a95e2, type: 3}
+  m_Sprite: {fileID: 21300008, guid: ee768f49b0997cb46b31fc95cafc27d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -687,7 +674,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300012, guid: be8a9e2328f32714aa7c89eef07a95e2, type: 3}
+  m_Sprite: {fileID: 21300012, guid: ee768f49b0997cb46b31fc95cafc27d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -838,6 +825,7 @@ MonoBehaviour:
   drown: {fileID: 8300000, guid: ad99d074e29a4014db0a51594e2e9f6f, type: 3}
   mushroom: {fileID: 8300000, guid: 50ff8a95f95986841aeb111a913b9140, type: 3}
   healSfx: {fileID: 8300000, guid: 8564779b4360a3d44892480188edafc0, type: 3}
+  content: {fileID: 1235857008}
   invincibility: 0
   controller: {fileID: 0}
   respawnPoint: {x: 0, y: 0, z: 0}
@@ -3215,14 +3203,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.99264705, g: 0.99994594, b: 0.99994594, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300006, guid: be8a9e2328f32714aa7c89eef07a95e2, type: 3}
+  m_Sprite: {fileID: 21300006, guid: ee768f49b0997cb46b31fc95cafc27d7, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3777,12 +3765,12 @@ Prefab:
     - target: {fileID: 114482251604710508, guid: 49a8caad57729c24892cdfb042d567c6,
         type: 2}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.47794116
       objectReference: {fileID: 0}
     - target: {fileID: 114482251604710508, guid: 49a8caad57729c24892cdfb042d567c6,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.2965517
+      value: 0.5031439
       objectReference: {fileID: 0}
     - target: {fileID: 114482251604710508, guid: 49a8caad57729c24892cdfb042d567c6,
         type: 2}
@@ -3797,17 +3785,17 @@ Prefab:
     - target: {fileID: 114594848173622030, guid: 49a8caad57729c24892cdfb042d567c6,
         type: 2}
       propertyPath: m_Color.r
-      value: 0
+      value: 0.03676468
       objectReference: {fileID: 0}
     - target: {fileID: 114594848173622030, guid: 49a8caad57729c24892cdfb042d567c6,
         type: 2}
       propertyPath: m_Color.g
-      value: 0.08108497
+      value: 0.12312347
       objectReference: {fileID: 0}
     - target: {fileID: 114594848173622030, guid: 49a8caad57729c24892cdfb042d567c6,
         type: 2}
       propertyPath: m_Color.b
-      value: 0.9044118
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114682835408592462, guid: 49a8caad57729c24892cdfb042d567c6,
         type: 2}
@@ -3833,6 +3821,40 @@ Prefab:
         type: 2}
       propertyPath: m_LocalScale.y
       value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482251604710508, guid: 49a8caad57729c24892cdfb042d567c6,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300008, guid: ee768f49b0997cb46b31fc95cafc27d7,
+        type: 3}
+    - target: {fileID: 114529383259975714, guid: 49a8caad57729c24892cdfb042d567c6,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 028d5bc8f0efe384cb890fee77c7175b,
+        type: 3}
+    - target: {fileID: 114594848173622030, guid: 49a8caad57729c24892cdfb042d567c6,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ee768f49b0997cb46b31fc95cafc27d7,
+        type: 3}
+    - target: {fileID: 114682835408592462, guid: 49a8caad57729c24892cdfb042d567c6,
+        type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300004, guid: ee768f49b0997cb46b31fc95cafc27d7,
+        type: 3}
+    - target: {fileID: 114682835408592462, guid: 49a8caad57729c24892cdfb042d567c6,
+        type: 2}
+      propertyPath: m_FillAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114482251604710508, guid: 49a8caad57729c24892cdfb042d567c6,
+        type: 2}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49a8caad57729c24892cdfb042d567c6, type: 2}
@@ -3909,7 +3931,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: be8a9e2328f32714aa7c89eef07a95e2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ee768f49b0997cb46b31fc95cafc27d7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

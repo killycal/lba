@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 /// <summary>
 /// This class handles all the base methods for modifying a character health.
@@ -16,6 +17,9 @@ public class Health : AbstractBehaviour {
 	public AudioClip drown;
 	public AudioClip mushroom;
 	public AudioClip healSfx;
+	public Image content;
+	private float fillAmount=1;
+
 
     [HideInInspector]public bool invincibility = false;     //If this bool is enabled the character cannot take damage.
 	public GameObject controller = null;
@@ -44,6 +48,7 @@ public class Health : AbstractBehaviour {
         {
             //Remove the value sent to the Damage from the ChangeHealth.
             ChangeHealth(-value);
+			//content.fillAmount = content.fillAmount-.2f;
             //Check if the current health is less than or equal to 0, if so kill the player.
             if (currentHealth <= 0)
             {
@@ -86,6 +91,8 @@ public class Health : AbstractBehaviour {
         currentHealth += value;
         currentHealth = Mathf.Clamp(currentHealth, 0, healthMax);
 		m_Audio.PlayOneShot (healSfx);
+		fillAmount = fillAmount + value*.2f;
+		content.fillAmount = fillAmount;
         VisualUpdate();
     }
 
@@ -94,7 +101,7 @@ public class Health : AbstractBehaviour {
     /// </summary>
     public virtual void VisualUpdate()
     {
-
+		content.fillAmount = fillAmount;
     }
 
     /// <summary>
