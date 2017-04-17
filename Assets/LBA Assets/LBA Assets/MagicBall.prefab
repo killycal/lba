@@ -251,7 +251,7 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: 4b030b92fbb12bb498c95052eb8c9d8f, type: 3}
   - {fileID: 8300000, guid: c71fcdd7d148a2e459e9cc28b8d67c64, type: 3}
-  - {fileID: 8300000, guid: 50ff8a95f95986841aeb111a913b9140, type: 3}
+  - {fileID: 8300000, guid: 6426197d3459c2842885321bc601889a, type: 3}
   - {fileID: 8300000, guid: 541c026b35467324fa98e8fef45019bf, type: 3}
 --- !u!114 &11400002
 MonoBehaviour:

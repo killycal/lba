@@ -24,8 +24,7 @@ public class Heart : Collectable {
 
 			//If the script has a defined SFX then it is played when the heart is picked up.
 			if (sfx != null) {
-				GameObject.Find ("Sound Handler").GetComponent<AudioSource> ().clip = sfx;
-				GameObject.Find ("Sound Handler").GetComponent<AudioSource> ().Play ();
+				GetComponent<AudioSource> ().PlayOneShot (sfx);
 			}
 
 			//Heal the player for the defined value.

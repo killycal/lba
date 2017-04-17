@@ -15,6 +15,7 @@ public class Health : AbstractBehaviour {
     public bool changeColorOnDamage = true;         //If this is enabled the character will turn a different color throughout the invincibility timer.
 	public AudioClip drown;
 	public AudioClip mushroom;
+	public AudioClip healSfx;
 
     [HideInInspector]public bool invincibility = false;     //If this bool is enabled the character cannot take damage.
 	public GameObject controller = null;
@@ -84,7 +85,7 @@ public class Health : AbstractBehaviour {
     {
         currentHealth += value;
         currentHealth = Mathf.Clamp(currentHealth, 0, healthMax);
-
+		m_Audio.PlayOneShot (healSfx);
         VisualUpdate();
     }
 
