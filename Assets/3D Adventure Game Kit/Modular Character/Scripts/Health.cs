@@ -19,6 +19,7 @@ public class Health : AbstractBehaviour {
 	public AudioClip healSfx;
 	public Image content;
 	private float fillAmount=1;
+	private int key=0;
 
 
     [HideInInspector]public bool invincibility = false;     //If this bool is enabled the character cannot take damage.
@@ -90,7 +91,8 @@ public class Health : AbstractBehaviour {
     {
         currentHealth += value;
         currentHealth = Mathf.Clamp(currentHealth, 0, healthMax);
-		m_Audio.PlayOneShot (healSfx);
+		if (value >0)
+			m_Audio.PlayOneShot (healSfx);
 		fillAmount = fillAmount + value*.2f;
 		content.fillAmount = fillAmount;
         VisualUpdate();
@@ -112,7 +114,8 @@ public class Health : AbstractBehaviour {
         transform.position = respawnPoint;
         transform.rotation = respawnRotation;
         currentHealth = healthMax;
-        VisualUpdate();
+		content.fillAmount = 1;
+        //VisualUpdate();
     }
 
     /// <summary>
@@ -169,5 +172,9 @@ public class Health : AbstractBehaviour {
 			m_Audio.PlayOneShot(mushroom);
 		}
 
+	}
+	public virtual void KeyCounter()
+	{
+		key = 1;
 	}
 }

@@ -92,6 +92,7 @@
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\LBA Assets\Effects\AntiAliasing\SMAA\Resources\SMAA.shader" />
+     <None Include="Assets\Models\Key\readME keys.txt" />
      <None Include="Assets\LBA Assets\Effects\AmbientOcclusion\Resources\Composition.cginc" />
      <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\LBA Assets\Effects\Bloom\Resources\Bloom.shader" />

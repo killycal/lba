@@ -37,6 +37,7 @@ public class Collectable : MonoBehaviour
 		if (c.gameObject.tag == "Player")
 		{
 			Effect(c.gameObject);
+			print ("Collision");
 
 		}
 	}
