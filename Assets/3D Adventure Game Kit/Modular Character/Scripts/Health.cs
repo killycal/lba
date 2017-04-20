@@ -91,11 +91,11 @@ public class Health : AbstractBehaviour {
     {
         currentHealth += value;
         currentHealth = Mathf.Clamp(currentHealth, 0, healthMax);
-		if (value >0)
-			m_Audio.PlayOneShot (healSfx);
-		fillAmount = fillAmount + value*.2f;
-		content.fillAmount = fillAmount;
-        VisualUpdate();
+		//if (value >0)
+		//	m_Audio.PlayOneShot (healSfx);
+		//fillAmount = fillAmount + value*.2f;
+		//content.fillAmount = fillAmount;
+        //VisualUpdate();
     }
 
     /// <summary>

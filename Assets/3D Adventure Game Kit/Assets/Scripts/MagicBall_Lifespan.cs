@@ -84,8 +84,8 @@ public class MagicBall_Lifespan : MonoBehaviour
 		}
 		if (collision.gameObject.tag == "Enemy") {
 			gameObject.SendMessage ("PlaySoundEnemyHit");
-			enemyHit = true;
-			Destroy (collision.gameObject); 
+			//enemyHit = true;
+			//Destroy (collision.gameObject); 
 			currentNumberOfBounces += 2;
 		} 
 		else {

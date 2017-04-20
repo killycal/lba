@@ -8,7 +8,7 @@ using System.Collections;
 public class PlayerHealth : Health {
     public Text text;           //Text which displays the current player health.
     public AudioClip hurtSfx;   //Sound FX played when damaged.
-
+	private float fillAmount=1;
     /// <summary>
     /// Start method uses Health.cs base start and collects the reference for the health text.
     /// </summary>
@@ -36,6 +36,17 @@ public class PlayerHealth : Health {
         }
         base.Knockback(origin);
     }
+	public override void ChangeHealth(int value)
+	{
+		currentHealth += value;
+		currentHealth = Mathf.Clamp (currentHealth, 0, healthMax);
+		if (value > 0)
+			m_Audio.PlayOneShot (healSfx);
+		fillAmount = fillAmount + value * .2f;
+		content.fillAmount = fillAmount;
+		VisualUpdate ();
+	}
+
 
     /// <summary>
     /// Update the UI with the characters current Health.

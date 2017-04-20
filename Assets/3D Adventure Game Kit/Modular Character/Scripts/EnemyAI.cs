@@ -244,7 +244,7 @@ public class EnemyAI : AbstractBehaviour {
     /// <param name="C"></param>
     void OnCollisionEnter(Collision C)
     {
-        if (C.gameObject.tag == "Player")
+		if (C.gameObject.tag == "Player")
         {
             Vector3 direction = target.transform.position - transform.position;
             //Checks the direction of the target to the enemy.
@@ -252,6 +252,7 @@ public class EnemyAI : AbstractBehaviour {
             {
                 //If the target is moving down.
                 if (C.transform.GetComponent<CharacterMotor>().m_Rigidbody.velocity.y < 0.2) { 
+					print("Player hit");
                     //Damage the enemy.
                     GetComponent<Health>().Damage(1, transform.position);
                     //Bounce the player off the enemy's head.
@@ -263,6 +264,10 @@ public class EnemyAI : AbstractBehaviour {
             }
 
         }
-
+		if (C.gameObject.tag == "MagicBall") 
+		{//Damage the enemy.
+			print("Magic ball hit");
+			GetComponent<Health>().Damage(1, transform.position);
+		}
     }
 }
