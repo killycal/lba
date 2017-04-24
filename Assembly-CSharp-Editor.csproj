@@ -108,6 +108,7 @@
      <None Include="Assets\LBA Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\LBA Assets\Effects\MotionBlur\Resources\Prefilter.cginc" />
      <None Include="Assets\LBA Assets\Effects\TonemappingColorGrading\Resources\TonemappingColorGrading.shader" />
+     <None Include="Assets\Fruit Pack\README.txt" />
      <None Include="Assets\LBA Assets\Effects\AmbientOcclusion\Resources\SeparableBlur.cginc" />
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\LBA Assets\Effects\MotionBlur\Resources\FrameBlending.shader" />

@@ -9,6 +9,7 @@ public class PlayerHealth : Health {
     public Text text;           //Text which displays the current player health.
     public AudioClip hurtSfx;   //Sound FX played when damaged.
 	private float fillAmount=1;
+	private float fillAmount2 = 1;
     /// <summary>
     /// Start method uses Health.cs base start and collects the reference for the health text.
     /// </summary>
@@ -43,10 +44,19 @@ public class PlayerHealth : Health {
 		if (value > 0)
 			m_Audio.PlayOneShot (healSfx);
 		fillAmount = fillAmount + value * .2f;
-		content.fillAmount = fillAmount;
+		healthBar.fillAmount = fillAmount;
 		VisualUpdate ();
 	}
-
+	public override void ChangeMana(int value)
+	{
+		currentMana += value;
+		currentMana = Mathf.Clamp (currentMana, 0, manaMax);
+		if (value > 0)
+			m_Audio.PlayOneShot (healSfx);
+		fillAmount2 = fillAmount2 + value * .2f;
+		manaBar.fillAmount = fillAmount;
+		VisualUpdate ();
+	}
 
     /// <summary>
     /// Update the UI with the characters current Health.

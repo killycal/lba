@@ -9,6 +9,8 @@ public class Health : AbstractBehaviour {
 
     public int healthMax = 5;               //This variable is the maxiumum amount of health at one time.
     public int currentHealth = 5;           //The current health the character has available.
+	public int manaMax = 5;
+	public int currentMana = 5;
     public float invincibilityTime = 1f;   //The time the character has before being allowed to be damaged again.
    
     public bool knockbackOnDamage = true;           //Bool enables knockback when the character is damaged.
@@ -17,8 +19,10 @@ public class Health : AbstractBehaviour {
 	public AudioClip drown;
 	public AudioClip mushroom;
 	public AudioClip healSfx;
-	public Image content;
-	private float fillAmount=1;
+	public Image healthBar;
+	public Image manaBar;
+	private float fillAmountHealth=1;
+	private float fillAmountMana = 1;
 	private int key=0;
 
 
@@ -97,13 +101,19 @@ public class Health : AbstractBehaviour {
 		//content.fillAmount = fillAmount;
         //VisualUpdate();
     }
+	public virtual void ChangeMana(int value)
+	{
+		currentMana += value;
+		currentMana = Mathf.Clamp(currentMana, 0, manaMax);
+	}
+
 
     /// <summary>
     /// This void is used for extended classes such as PlayerHealth.cs to update the UI when the health changes.
     /// </summary>
     public virtual void VisualUpdate()
     {
-		content.fillAmount = fillAmount;
+		healthBar.fillAmount = fillAmountHealth;
     }
 
     /// <summary>
@@ -114,7 +124,7 @@ public class Health : AbstractBehaviour {
         transform.position = respawnPoint;
         transform.rotation = respawnRotation;
         currentHealth = healthMax;
-		content.fillAmount = 1;
+		healthBar.fillAmount = 1;
         //VisualUpdate();
     }
 

@@ -28,8 +28,11 @@ public class Heart : Collectable {
 			}
 
 			//Heal the player for the defined value.
-			player.GetComponent<Health> ().Heal (value);
-
+			if (value == -1) {
+				player.GetComponent<Health> ().ChangeMana (-value);
+			} else {
+				player.GetComponent<Health> ().Heal (value);
+			}
 			//Destroy the heart.
 			Destroy (transform.parent.gameObject);
 		}
