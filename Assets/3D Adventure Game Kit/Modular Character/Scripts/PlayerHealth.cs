@@ -51,10 +51,12 @@ public class PlayerHealth : Health {
 	{
 		currentMana += value;
 		currentMana = Mathf.Clamp (currentMana, 0, manaMax);
+		if (currentMana < 0)
+			currentMana = 0;
 		if (value > 0)
 			m_Audio.PlayOneShot (healSfx);
 		fillAmount2 = fillAmount2 + value * .2f;
-		manaBar.fillAmount = fillAmount;
+		manaBar.fillAmount = fillAmount2;
 		VisualUpdate ();
 	}
 
@@ -68,5 +70,14 @@ public class PlayerHealth : Health {
             text.text = currentHealth.ToString();
         }
     }
+	public override void Dead()
+	{
+		transform.position = respawnPoint;
+		transform.rotation = respawnRotation;
+		currentHealth = healthMax;
+		healthBar.fillAmount = 1;
+		fillAmount = 1;
+		VisualUpdate();
+	}
 
 }

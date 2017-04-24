@@ -29,7 +29,7 @@ GameObject:
   m_TagString: Mushroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 1
   m_IsActive: 1
 --- !u!4 &4288708791570952
 Transform:
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1746112913994286}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.142315, y: -0.04094875, z: -0.5407648}
+  m_LocalPosition: {x: -4.586275, y: 0.105713725, z: -1.2531509}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,7 +92,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 50ff8a95f95986841aeb111a913b9140, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -176,6 +176,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroy: {fileID: 8300000, guid: 50ff8a95f95986841aeb111a913b9140, type: 3}
   heart_prefab: {fileID: 146898, guid: e58e91e7fa0c56f4aad9fe8cf8529006, type: 2}
+  mana_prefab: {fileID: 1415824143297630, guid: 5f5f9c32ba0dbe54c82f44153e81d36d,
+    type: 2}
+  coin_prefab: {fileID: 128786, guid: d32e1942e5849ba4aafa0b1105d4feda, type: 2}
   yield: 0.3
 --- !u!135 &135060699179033058
 SphereCollider:

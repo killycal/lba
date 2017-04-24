@@ -13,7 +13,7 @@ public class Coin : Collectable {
     /// Overidden from Collectable when the object is touched by the player.
     /// </summary>
     /// <param name="player"></param>
-    public override void Effect(GameObject player)
+	public override void Effect(GameObject player)
     {
         //If there is a specified FX spawn the particle effect.
         if (fx)
@@ -31,7 +31,7 @@ public class Coin : Collectable {
         //If there is a UI element named CoinText Get the counter class and increase the value.
         if (GameObject.Find("CoinText"))
         {
-            GameObject.Find("CoinText").GetComponent<Counter>().Increase();
+            //GameObject.Find("CoinText").GetComponent<Counter>().Increase();
         }
 
         //Destroy the collectable on pickup.

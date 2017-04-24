@@ -6,6 +6,7 @@ public class MagicBall : MonoBehaviour
 	public GameObject MagicBall_prefab;
 	private GameObject MagicBall_object;
 	private GameObject CheckForMagicBall;
+	private GameObject Player;
 	public float myTimer= 5.0f;
 	
 	// Update is called once per frame
@@ -18,7 +19,11 @@ public class MagicBall : MonoBehaviour
 			{
 				MagicBall_object = (GameObject)Instantiate(MagicBall_prefab, transform.position + transform.forward+transform.up, transform.rotation);
 				MagicBall_object.GetComponent<Rigidbody>().AddForce(transform.forward*4, ForceMode.Impulse);
+				Player= GameObject.FindWithTag ("Player");
+				Player.GetComponent<PlayerHealth> ().ChangeMana (-1);
+
 			}
+
 		}
 	}
 }

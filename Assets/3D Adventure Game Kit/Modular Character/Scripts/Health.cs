@@ -105,6 +105,7 @@ public class Health : AbstractBehaviour {
 	{
 		currentMana += value;
 		currentMana = Mathf.Clamp(currentMana, 0, manaMax);
+		VisualUpdate();
 	}
 
 
@@ -114,6 +115,7 @@ public class Health : AbstractBehaviour {
     public virtual void VisualUpdate()
     {
 		healthBar.fillAmount = fillAmountHealth;
+		manaBar.fillAmount = fillAmountMana;
     }
 
     /// <summary>
@@ -125,7 +127,8 @@ public class Health : AbstractBehaviour {
         transform.rotation = respawnRotation;
         currentHealth = healthMax;
 		healthBar.fillAmount = 1;
-        //VisualUpdate();
+		fillAmountHealth = 1;
+        VisualUpdate();
     }
 
     /// <summary>
