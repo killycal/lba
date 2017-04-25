@@ -23,11 +23,11 @@ public class Coin : Collectable {
         }
 
         //If there is a specified SFX play the clip
-        if (sfx != null)
+        /*if (sfx != null)
         {
             GameObject.Find("Sound Handler").GetComponent<AudioSource>().clip = sfx;
             GameObject.Find("Sound Handler").GetComponent<AudioSource>().Play();
-        }
+        }*/
         //If there is a UI element named CoinText Get the counter class and increase the value.
         if (GameObject.Find("CoinText"))
         {

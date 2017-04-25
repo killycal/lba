@@ -174,7 +174,7 @@ public class Health : AbstractBehaviour {
 	public virtual void OnTriggerEnter(Collider other)
 	{
 		if (other.tag == "Water") {
-			m_Audio.PlayOneShot(drown);
+			m_Audio.PlayOneShot(drown,10);
 			Dead ();
 		}
 
@@ -183,6 +183,11 @@ public class Health : AbstractBehaviour {
 	{
 		if (other.collider.gameObject.tag == "Mushroom") {
 			m_Audio.PlayOneShot(mushroom);
+		}
+		if ((other.collider.gameObject.name == "Coin")||
+			(other.collider.gameObject.name == "Key"))
+		{
+			m_Audio.PlayOneShot(healSfx, 10);
 		}
 
 	}

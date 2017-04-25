@@ -40,14 +40,14 @@ public class AdvancedJump : MultiJump {
         else
         {
             //When the character is not grounded. If the character is colliding with the wall we do a wall jump, else if we are not colliding with the wall we attempt to do the next part of the multijump.
-            if (m_Motor.collision.wallCollision)
+            /*if (m_Motor.collision.wallCollision)
             {
                 //Wall jumps aren't classed as a multijump to allow the player to combo their jumps together to get higher up. As jumpsremaining isn't altered.
                 WallJump();
                 jumped = true;
             }
             else
-            {
+            {*/
                 if (jumpsRemaining > 0)
                 {
 					
@@ -56,7 +56,7 @@ public class AdvancedJump : MultiJump {
                     BaseJump();
                     jumped = true;
                 }
-            }
+            //}
         }
 
         //If Jumped is set to true by any of the conditions being true to tell the animator to Jump.
