@@ -40,7 +40,7 @@ public class Jump : AbstractBehaviour {
     public virtual void BaseJump()
     {
 		Vector3 newVelocity = m_Motor.movement.movementDirection;
-		print (newVelocity);
+		//print (newVelocity);
 		if (newVelocity.magnitude<1)
 		{
 			//print ("Case 1");

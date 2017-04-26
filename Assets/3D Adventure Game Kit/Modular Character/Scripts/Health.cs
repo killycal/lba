@@ -181,18 +181,16 @@ public class Health : AbstractBehaviour {
 	}
 	public virtual void OnCollisionEnter(Collision other)
 	{
-		if (other.collider.gameObject.tag == "Mushroom") {
+		if (other.collider.gameObject.tag == "Mushroom")
 			m_Audio.PlayOneShot(mushroom);
-		}
-		if ((other.collider.gameObject.name == "Coin")||
-			(other.collider.gameObject.name == "Key"))
-		{
-			m_Audio.PlayOneShot(healSfx, 10);
-		}
+		
+		else if ((other.collider.gameObject.name == "Coin") ||
+		    (other.collider.gameObject.name == "Key"))
+			m_Audio.PlayOneShot (healSfx, 10);
 
 	}
-	public virtual void KeyCounter()
+	public virtual void KeyCounter(int value)
 	{
-		key = 1;
+		key +=value;
 	}
 }

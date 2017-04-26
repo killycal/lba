@@ -10,6 +10,7 @@ public class PlayerHealth : Health {
     public AudioClip hurtSfx;   //Sound FX played when damaged.
 	private float fillAmount=1;
 	private float fillAmount2 = 1;
+	private bool keyHit= false;
     /// <summary>
     /// Start method uses Health.cs base start and collects the reference for the health text.
     /// </summary>
@@ -70,6 +71,15 @@ public class PlayerHealth : Health {
             text.text = currentHealth.ToString();
         }
     }
+	public bool GetKeyHit()
+	{
+		return keyHit;
+	}
+	public void SetKeyHit(bool hit)
+	{
+		keyHit = hit;
+	}
+
 	public override void Dead()
 	{
 		transform.position = respawnPoint;

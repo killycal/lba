@@ -7,7 +7,12 @@ public class Key : Collectable {
 	public GameObject fx;   //Prefab of Particle Effect.
 	//public AudioClip sfx;   //Sound Effect.
 	public int value = 1;   //How much the heart heals.
-	//private int direction=0;
+	private GameObject obj;
+	private GameObject controller = null;
+	private MagicBall ball;
+	public Vector3 dist;
+	private Vector3 force;
+	private bool hit;
 
 	public override void Effect(GameObject player)
 	{
@@ -20,25 +25,20 @@ public class Key : Collectable {
 
 			}
 
-			//If the script has a defined SFX then it is played when the heart is picked up.
-			//if (sfx != null) {
-				//GetComponent<AudioSource> ().PlayOneShot (sfx);
-
-			//}
-
-			//Heal the player for the defined value.
-			//player.GetComponent<Health> ().Heal (value);
-
 			//Destroy the heart.
 		Destroy (transform.parent.gameObject);
-		player.GetComponent<Health> ().KeyCounter ();
-		//}
-		//else {
-			//if (direction % 2 == 0)
-			//transform.parent.gameObject.transform.position = transform.forward/10;
-			//else
-			//transform.parent.gameObject.transform.position = transform.forward * -1/10;
-			//direction++;
-		//}
+		player.GetComponent<Health> ().KeyCounter (1);
+		controller.GetComponent<PlayerHealth> ().SetKeyHit (false);
+	}
+	void Start ()
+	{
+		controller = GameObject.FindWithTag("Player");
+		//ball = obj.AddComponent<MagicBall>(); 
+	}
+	void Update()
+	{
+		hit = controller.GetComponent<PlayerHealth> ().GetKeyHit ();
+		if (hit==true)
+			transform.position = Vector3.Lerp(transform.position, controller.transform.position, 0.05f);
 	}
 }

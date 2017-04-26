@@ -8,7 +8,7 @@ public class EnemyHealth : Health {
 
     public EnemyAI ai;  //Reference to the EnemyAi.cs on the character.
 	public bool DropKeyOnDeath=false;
-	public GameObject key;
+	public GameObject keyObject;
     /// <summary>
     /// Method uses the base Start from Health.cs however retrieving any necessary references.
     /// </summary>
@@ -29,7 +29,7 @@ public class EnemyHealth : Health {
         //Activate Death Animation.
 		if (DropKeyOnDeath == true) 
 		{
-			key = (GameObject)Instantiate(key, gameObject.transform.position+transform.up*3,transform.rotation);
+			keyObject = (GameObject)Instantiate(keyObject, gameObject.transform.position+transform.up*3,transform.rotation);
 		}
         m_Animator.SetTrigger("Dead");
         //Begin the countdown to destroy the character.

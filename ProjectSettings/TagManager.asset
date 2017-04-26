@@ -10,6 +10,8 @@ TagManager:
   - Moving Platform
   - Water
   - Mushroom
+  - Fire
+  - Key
   layers:
   - Default
   - TransparentFX
