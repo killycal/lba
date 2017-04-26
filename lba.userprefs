@@ -1,16 +1,15 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Key.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\3D Adventure Game Kit\Assets\Scripts\MagicBall_Lifespan.cs">
     <Files>
-      <File FileName="Assets\3D Adventure Game Kit\Assets\Scripts\MagicBall_Lifespan.cs" Line="31" Column="9" />
-      <File FileName="Assets\Key.cs" Line="10" Column="25" />
-      <File FileName="Assets\3D Adventure Game Kit\Assets\Scripts\Collectable.cs" Line="1" Column="1" />
-      <File FileName="Assets\3D Adventure Game Kit\Modular Character\Scripts\Health.cs" Line="26" Column="20" />
-      <File FileName="Assets\3D Adventure Game Kit\Assets\Scripts\Coin.cs" Line="30" Column="12" />
-      <File FileName="Assets\3D Adventure Game Kit\Assets\Scripts\Heart.cs" Line="22" Column="5" />
-      <File FileName="Assets\3D Adventure Game Kit\Modular Character\Scripts\PlayerHealth.cs" Line="76" Column="17" />
+      <File FileName="Assets\3D Adventure Game Kit\Assets\Scripts\MagicBall_Lifespan.cs" Line="100" Column="5" />
+      <File FileName="Assets\Key.cs" Line="42" Column="96" />
+      <File FileName="Assets\3D Adventure Game Kit\Modular Character\Scripts\PlayerHealth.cs" Line="87" Column="29" />
       <File FileName="Assets\3D Adventure Game Kit\Modular Character\Scripts\Jump.cs" Line="43" Column="5" />
-      <File FileName="Assets\3D Adventure Game Kit\Modular Character\Scripts\AdvancedJump.cs" Line="59" Column="15" />
+      <File FileName="Assets\3D Adventure Game Kit\Assets\Scripts\MagicBall.cs" Line="21" Column="100" />
+      <File FileName="Assets\Gate.cs" Line="31" Column="38" />
+      <File FileName="Assets\3D Adventure Game Kit\Modular Character\Scripts\Health.cs" Line="189" Column="38" />
+      <File FileName="Assets\3D Adventure Game Kit\Modular Character\Scripts\AbstractBehaviour.cs" Line="14" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -189,8 +189,12 @@ public class Health : AbstractBehaviour {
 			m_Audio.PlayOneShot (healSfx, 10);
 
 	}
-	public virtual void KeyCounter(int value)
+	public void KeyCounter(int value)
 	{
 		key +=value;
+	}
+	public int getKey()
+	{
+		return key;
 	}
 }

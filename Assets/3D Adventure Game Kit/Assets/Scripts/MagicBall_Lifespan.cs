@@ -46,13 +46,21 @@ public class MagicBall_Lifespan : MonoBehaviour
 		{
 			ball.myTimer -= Time.deltaTime;
 		}
+		if (controller.GetComponent<Health> ().currentMana < 1) {
+			numberOfBounces = 1;
+		}
+
+	}
+	
+	void FixedUpdate()
+	{
 		if (returnMagicBall == true)
 		{			
 			Vector3 dist = controller.transform.position - GetComponent<Rigidbody>().position;
 			Vector3 tgtVel = Vector3.ClampMagnitude(toVel * dist, maxVel);
 			Vector3 error = tgtVel - GetComponent<Rigidbody>().velocity;
 			Vector3 force = Vector3.ClampMagnitude(gain * error, maxForce);
-			GetComponent<Rigidbody>().AddForce(force);
+			GetComponent<Rigidbody>().AddForce(force, ForceMode.Impulse);
 			//transform.position = Vector3.Lerp(transform.position, controller.transform.position, 0.01f);
 
 			if ((enemyHit == false) && (played == false)) {
@@ -71,12 +79,6 @@ public class MagicBall_Lifespan : MonoBehaviour
 			GetComponent<Rigidbody>().AddForce(force);
 			dist = controller.transform.position - GetComponent<Rigidbody>().position;
 		}
-
-	}
-	
-	void FixedUpdate()
-	{
-		
 	}
 	
 	void OnCollisionEnter(Collision collision)
@@ -94,6 +96,8 @@ public class MagicBall_Lifespan : MonoBehaviour
 		else {
 			ball.GetComponent<Rigidbody>().AddForce(transform.forward*(1/2)+transform.up*2, ForceMode.Impulse);
 			currentNumberOfBounces += 1;
+			if (currentNumberOfBounces == 2)
+				controller.GetComponent<PlayerHealth> ().ChangeMana (-1);
 			gameObject.SendMessage("PlaySound");
 		}
 

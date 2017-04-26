@@ -39,6 +39,6 @@ public class Key : Collectable {
 	{
 		hit = controller.GetComponent<PlayerHealth> ().GetKeyHit ();
 		if (hit==true)
-			transform.position = Vector3.Lerp(transform.position, controller.transform.position, 0.05f);
+			transform.position = Vector3.Lerp(transform.position, controller.transform.position, 0.13f);
 	}
 }

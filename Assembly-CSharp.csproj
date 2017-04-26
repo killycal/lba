@@ -78,6 +78,7 @@
      <Compile Include="Assets\3D Adventure Game Kit\Modular Character\Scripts\MultiJump.cs" />
      <Compile Include="Assets\3D Adventure Game Kit\Modular Character\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Dynamic Flickering Light\FlickeringLight.cs" />
+     <Compile Include="Assets\Gate.cs" />
      <Compile Include="Assets\HealthBar.cs" />
      <Compile Include="Assets\Key.cs" />
      <Compile Include="Assets\LBA Assets\Effects\AmbientOcclusion\AmbientOcclusion.cs" />

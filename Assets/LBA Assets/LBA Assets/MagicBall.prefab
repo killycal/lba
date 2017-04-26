@@ -113,7 +113,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   serializedVersion: 2
-  m_Mass: 0.3
+  m_Mass: 0.4
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
@@ -272,6 +272,7 @@ MonoBehaviour:
   controller: {fileID: 0}
   obj: {fileID: 100002}
   dist: {x: 0, y: 0, z: 0}
+  keyHit: 0
 --- !u!122 &12200000
 Halo:
   m_ObjectHideFlags: 1
