@@ -13,6 +13,8 @@ public class Key : Collectable {
 	public Vector3 dist;
 	private Vector3 force;
 	private bool hit;
+	private float speed = 10F;
+
 
 	public override void Effect(GameObject player)
 	{
@@ -25,7 +27,6 @@ public class Key : Collectable {
 
 			}
 
-			//Destroy the heart.
 		Destroy (transform.parent.gameObject);
 		player.GetComponent<Health> ().KeyCounter (1);
 		controller.GetComponent<PlayerHealth> ().SetKeyHit (false);
@@ -38,7 +39,10 @@ public class Key : Collectable {
 	void Update()
 	{
 		hit = controller.GetComponent<PlayerHealth> ().GetKeyHit ();
-		if (hit==true)
-			transform.position = Vector3.Lerp(transform.position, controller.transform.position, 0.13f);
+		if (hit == true) {
+			float distCovered = (Time.time - controller.GetComponent<PlayerHealth>().startTime) * speed;
+			float fracJourney = distCovered / controller.GetComponent<PlayerHealth> ().journeyLength;
+			transform.position = Vector3.Lerp (transform.position, controller.transform.position, fracJourney);
+		}
 	}
 }

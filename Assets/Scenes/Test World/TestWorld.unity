@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.24752533, g: 0.26590168, b: 0.49034452, a: 1}
+  m_IndirectSpecularColor: {r: 0.2475138, g: 0.26589814, b: 0.49032992, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -711,6 +711,8 @@ MonoBehaviour:
   respawnRotation: {x: 0, y: 0, z: 0, w: 0}
   text: {fileID: 0}
   hurtSfx: {fileID: 8300000, guid: 535b831e1970bcb488c1de1b8d9ef462, type: 3}
+  startTime: 0
+  journeyLength: 0
 --- !u!114 &131087355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1185,6 +1187,30 @@ Prefab:
     - target: {fileID: 400012, guid: 3ffbcc56a03c88744aa507dd742e04c2, type: 3}
       propertyPath: m_LocalScale.z
       value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400004, guid: 3ffbcc56a03c88744aa507dd742e04c2, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400002, guid: 3ffbcc56a03c88744aa507dd742e04c2, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 3ffbcc56a03c88744aa507dd742e04c2, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400006, guid: 3ffbcc56a03c88744aa507dd742e04c2, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400010, guid: 3ffbcc56a03c88744aa507dd742e04c2, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6400008, guid: 3ffbcc56a03c88744aa507dd742e04c2, type: 3}
+      propertyPath: m_Convex
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ffbcc56a03c88744aa507dd742e04c2, type: 3}

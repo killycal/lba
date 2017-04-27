@@ -11,6 +11,8 @@ public class PlayerHealth : Health {
 	private float fillAmount=1;
 	private float fillAmount2 = 1;
 	private bool keyHit= false;
+	public float startTime;
+	public float journeyLength;
     /// <summary>
     /// Start method uses Health.cs base start and collects the reference for the health text.
     /// </summary>
@@ -78,6 +80,8 @@ public class PlayerHealth : Health {
 	public void SetKeyHit(bool hit)
 	{
 		keyHit = hit;
+		startTime = Time.time;
+		journeyLength = Vector3.Distance (controller.transform.position, GameObject.FindWithTag ("Key").transform.position);
 	}
 
 	public override void Dead()
