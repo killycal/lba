@@ -37,6 +37,12 @@ ModelImporter:
     4300006: sphere1
     4300008: sphere0
     4300010: body
+    6400000: body
+    6400002: sphere0
+    6400004: sphere1
+    6400006: sphere2
+    6400008: sphere3
+    6400010: sphere4
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -48,8 +54,10 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
-    animationImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
+    rigImportErrors: "Invalid Avatar Rig Configuration. Missing or invalid transform:\n\tRequired
       human bone 'Hips' not found\n"
+    rigImportWarnings: 
+    animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
@@ -65,7 +73,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 1
@@ -79,8 +87,8 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
-    normalImportMode: 0
+    normalSmoothAngle: 180
+    normalImportMode: 1
     tangentImportMode: 3
   importAnimation: 1
   copyAvatar: 0
