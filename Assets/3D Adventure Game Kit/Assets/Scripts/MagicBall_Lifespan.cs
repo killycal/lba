@@ -20,6 +20,7 @@ public class MagicBall_Lifespan : MonoBehaviour
 	private bool played=false;
 	private bool keyExists=false;
 	public bool keyHit = false;
+	private int playhit=0;
 
 
 
@@ -98,7 +99,10 @@ public class MagicBall_Lifespan : MonoBehaviour
 			currentNumberOfBounces += 1;
 			if (currentNumberOfBounces == 2)
 				controller.GetComponent<PlayerHealth> ().ChangeMana (-1);
-			gameObject.SendMessage("PlaySound");
+			if (playhit < 3) {
+				gameObject.SendMessage ("PlaySound");
+				playhit++;
+			}
 		}
 
 	}
