@@ -17,7 +17,7 @@ public class Gate : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (unlocked == true)
-		transform.position = Vector3.Lerp(transform.position, destination, 0.005f);
+		transform.position = Vector3.Lerp(transform.position, destination, 0.05f);
 	}
 	void OnCollisionEnter(Collision c)
 	{
