@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 44b3c5d0eecd4314a8f1cc09a92867d4
-timeCreated: 1493835497
+guid: 1e0234ba46db21a48b2c2996830f7440
+timeCreated: 1494297771
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -35,12 +35,12 @@ ModelImporter:
     100054: mixamorig:Spine
     100056: mixamorig:Spine1
     100058: mixamorig:Spine2
-    100060: //RootNode
-    100062: sphere0
-    100064: sphere1
-    100066: sphere2
-    100068: sphere3
-    100070: sphere4
+    100060: sphere0
+    100062: sphere1
+    100064: sphere2
+    100066: sphere3
+    100068: sphere4
+    100070: //RootNode
     400000: body
     400002: Camera
     400004: Camera.001
@@ -71,19 +71,19 @@ ModelImporter:
     400054: mixamorig:Spine
     400056: mixamorig:Spine1
     400058: mixamorig:Spine2
-    400060: //RootNode
-    400062: sphere0
-    400064: sphere1
-    400066: sphere2
-    400068: sphere3
-    400070: sphere4
+    400060: sphere0
+    400062: sphere1
+    400064: sphere2
+    400066: sphere3
+    400068: sphere4
+    400070: //RootNode
     4300000: body
     4300002: sphere0
     4300004: sphere1
     4300006: sphere2
     4300008: sphere3
     4300010: sphere4
-    7400000: run
+    7400000: AdventureKid_Idle
     9500000: //RootNode
     13700000: body
     13700002: sphere0
@@ -115,17 +115,17 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: run
+      name: AdventureKid_Idle
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 42
+      lastFrame: 679
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0

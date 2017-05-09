@@ -57,6 +57,7 @@
      <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\TiltInput.cs" />
      <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\TouchPad.cs" />
      <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\Standard Assets\ParticleSystems\Dynamic Flickering Light\FlickeringLight.cs" />
      <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\AfterburnerPhysicsForce.cs" />
      <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\ExplosionFireAndDebris.cs" />
      <Compile Include="Assets\Standard Assets\ParticleSystems\Scripts\ExplosionPhysicsForce.cs" />
@@ -93,7 +94,7 @@
      <Compile Include="Assets\Standard Assets\Utility\WaypointProgressTracker.cs" />
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
-     <None Include="Assets\Dynamic Flickering Light\readme.txt" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Dynamic Flickering Light\readme.txt" />
      <None Include="Assets\3D Adventure Game Kit\Assets\Shader\Diffuse Transparency.shader" />
      <None Include="Assets\LBA Assets\Effects\AntiAliasing\FXAA\Resources\FXAA3.cginc" />
      <None Include="Assets\3D Adventure Game Kit\Read Me.txt" />
@@ -136,7 +137,7 @@
      <None Include="Assets\LBA Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\LBA Assets\Effects\MotionBlur\Resources\Prefilter.cginc" />
      <None Include="Assets\LBA Assets\Effects\TonemappingColorGrading\Resources\TonemappingColorGrading.shader" />
-     <None Include="Assets\Fruit Pack\README.txt" />
+     <None Include="Assets\Models\Fruit Pack\README.txt" />
      <None Include="Assets\LBA Assets\Effects\AmbientOcclusion\Resources\SeparableBlur.cginc" />
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\LBA Assets\Effects\MotionBlur\Resources\FrameBlending.shader" />

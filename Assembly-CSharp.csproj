@@ -77,10 +77,6 @@
      <Compile Include="Assets\3D Adventure Game Kit\Modular Character\Scripts\Movement.cs" />
      <Compile Include="Assets\3D Adventure Game Kit\Modular Character\Scripts\MultiJump.cs" />
      <Compile Include="Assets\3D Adventure Game Kit\Modular Character\Scripts\PlayerHealth.cs" />
-     <Compile Include="Assets\Dynamic Flickering Light\FlickeringLight.cs" />
-     <Compile Include="Assets\Gate.cs" />
-     <Compile Include="Assets\HealthBar.cs" />
-     <Compile Include="Assets\Key.cs" />
      <Compile Include="Assets\LBA Assets\Effects\AmbientOcclusion\AmbientOcclusion.cs" />
      <Compile Include="Assets\LBA Assets\Effects\AmbientOcclusion\Helpers\PropertyObserver.cs" />
      <Compile Include="Assets\LBA Assets\Effects\AmbientOcclusion\Helpers\Settings.cs" />
@@ -116,10 +112,13 @@
      <Compile Include="Assets\LBA Assets\Environment\Water\Water\Scripts\Water.cs" />
      <Compile Include="Assets\LBA Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\LBA Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
+     <Compile Include="Assets\LBA Assets\Gate.cs" />
+     <Compile Include="Assets\LBA Assets\HealthBar.cs" />
+     <Compile Include="Assets\LBA Assets\Key.cs" />
      <Compile Include="Assets\LBA Assets\Mushroom.cs" />
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
-     <None Include="Assets\Dynamic Flickering Light\readme.txt" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Dynamic Flickering Light\readme.txt" />
      <None Include="Assets\3D Adventure Game Kit\Assets\Shader\Diffuse Transparency.shader" />
      <None Include="Assets\LBA Assets\Effects\AntiAliasing\FXAA\Resources\FXAA3.cginc" />
      <None Include="Assets\3D Adventure Game Kit\Read Me.txt" />
@@ -162,7 +161,7 @@
      <None Include="Assets\LBA Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
      <None Include="Assets\LBA Assets\Effects\MotionBlur\Resources\Prefilter.cginc" />
      <None Include="Assets\LBA Assets\Effects\TonemappingColorGrading\Resources\TonemappingColorGrading.shader" />
-     <None Include="Assets\Fruit Pack\README.txt" />
+     <None Include="Assets\Models\Fruit Pack\README.txt" />
      <None Include="Assets\LBA Assets\Effects\AmbientOcclusion\Resources\SeparableBlur.cginc" />
      <None Include="Assets\3D Adventure Game Kit\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
      <None Include="Assets\LBA Assets\Effects\MotionBlur\Resources\FrameBlending.shader" />
